@@ -16,7 +16,7 @@ async def get_async_session() -> AsyncGenerator[AsyncSession, None]:
 
 @as_declarative()
 class Base:
-    id: Mapped[int] = mapped_column(primary_key=True)  # TODO: check index
+    id: Mapped[int] = mapped_column(primary_key=True)
 
     @declared_attr
     def __tablename__(cls) -> str:
